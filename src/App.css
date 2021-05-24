@@ -13,4 +13,24 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
+  color: white;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--debug);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.article {
+  margin: 0 2em;
 }
