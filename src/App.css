@@ -2,35 +2,184 @@
   --debug: 1px solid red;
 }
 
-.background {
-  background-color: hsl(0, 100%, 74%);
-  height: 100vh;
+@media all and (min-width: 1440px) {
+  .background {
+    background-color: hsl(0, 100%, 74%);
+    height: 100vh;
+  }
+
+  .overlay-content {
+    background-image: url('/src/images/bg-intro-desktop.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    color: white;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 8px rgba(0,0,0,0.2);
+    padding: 2.5em;
+    width: 100%;
+  }
+
+  input {
+    margin: .7em 0;
+    border-radius: 8px;
+    padding: 1em 2em;
+    font-size: large;
+    font-weight: bold;
+    border: 1px solid hsl(246, 25%, 77%);
+  }
+
+  input:focus {
+    outline: none;
+    box-shadow: inset 0px 0px 0px 1px #000;
+  }
+
+  input:nth-of-type(5) {
+    background-color: hsl(154, 59%, 51%);
+    color: #fff;
+    font-weight: 400;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 3.5rem;
+  }
+
+  p {
+    margin: 2em 0;
+    line-height: 1.8rem;
+  }
+
+  .article {
+    margin: 0 2em;
+  }
+
+  small {
+    color: hsl(246, 25%, 77%);
+    font-weight: bold;
+    padding: 10px;
+    font-size: .7em;
+    text-align: center;
+  }
+
+  small span {
+    color: hsl(0, 100%, 74%);
+  }
+
+  .advert {
+    text-align: center;
+    background-color: hsl(248, 32%, 49%);
+    padding: 1em 2em;
+    width: 103.5%;
+    margin: 1.5em 0;
+    box-shadow: 1px 8px rgba(0,0,0,0.2);
+    border-radius: 6px;
+  }
+
+  .advert span {
+    font-weight: bold;
+  }
 }
 
-.overlay-content {
-  background-image: url('/src/images/bg-intro-desktop.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-  color: white;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: var(--debug);
-}
+@media all and (min-width: 375px) and (max-width: 1440px) {
+  .background {
+    background-color: hsl(0, 100%, 74%);
+    height: 100%;
+  }
 
-form {
-  display: flex;
-  flex-direction: column;
-}
+  .overlay-content {
+    background-image: url('/src/images/bg-intro-mobile.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    color: white;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    padding: 8em 1.5em;
+  }
 
-h1 {
-  font-size: 3rem;
-  font-weight: 600;
-}
+  .article-text {
+    text-align: center;
+  }
 
-.article {
-  margin: 0 2em;
+  .article-text h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2rem;
+  }
+
+  .article-text p {
+    margin: 1.5em 0 2rem;
+    line-height: 1.5rem;
+  }
+
+  .article-form .advert {
+    text-align: center;
+    background-color: hsl(248, 32%, 49%);
+    padding: 1em 2em;
+    margin: 1.5em 0;
+    box-shadow: 1px 8px rgba(0,0,0,0.2);
+    border-radius: 6px;
+    line-height: 1.6rem;
+  }
+
+  .article-form .advert span {
+    font-weight: bold;
+  }
+
+  .article-form form {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 1px 8px rgba(0,0,0,0.1);
+    padding: 1.5em;
+  }
+
+  .article-form form input {
+    margin: .5em 0;
+    padding: 1em;
+    border-radius: 6px;
+    border: 1px solid hsl(246, 25%, 77%);
+    font-weight: bold;
+  }
+
+  .article-form form input:focus {
+    outline: none;
+    box-shadow: inset 0px 0px 0px 1px hsl(248, 32%, 49%);
+  }
+
+  .article-form form input:nth-of-type(5) {
+    color: #fff;
+    border: none;
+    background-color: hsl(154, 59%, 51%);
+    letter-spacing: 2px;
+  }
+
+  .article-form form small {
+    color: hsl(246, 25%, 77%);
+    text-align: center;
+    font-size: .7rem;
+    line-height: 1.4rem;
+  }
+
+  .article-form form small span {
+    color: hsl(0, 100%, 74%);
+  }
 }
